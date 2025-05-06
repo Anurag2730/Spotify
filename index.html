@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Spotify-Web Player: Music for everyone</title>
+</head>
+<body>
+    <div class="main">
+        <button class="sidebar-toggle" id="toggleSidebar">
+            <i class="fa-solid fa-bars"></i> <!-- Hamburger icon -->
+        </button>
+        <div class="sidebar">
+            <div class="nav">
+                <div class="nav-option" style="opacity: 1;">
+                    <i class="fa-solid fa-house"></i>    
+                    <a href=".main">Home </a>
+                </div>
+                <div class="nav-option">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#">Search </a>
+                </div>
+            </div>
+            <div class="library">
+                <div class="options">
+                    <div class="lib-option nav-option">
+                        <i class="fa-solid fa-book"></i>
+                        <a href="#">Your Library </a>              
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </div>
+                <div class="lib-box">
+                    <div class="box">
+                        <p class="box-p1"> Create your first playlist </p>
+                        <p class="box-p2"> It's easy, we'll help you</p>
+                        <button class="badge">  Create playlist</button>
+                    </div>
+                    <div class="box">
+                        <p class="box-p1"> Let's find some podcasts to follow </p>
+                        <p class="box-p2"> We'll keep you updated on new episodes</p>
+                        <button class="badge">  Browse podcasts</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="sticky-nav">
+                <div class="sticky-nav-icons">
+                    <i class="fa-solid fa-less-than"></i>
+                    <i class="fa-solid fa-greater-than" id="hide1"></i>
+                </div>
+                <div class="sticky-nav-options">
+                    <button class="badge nav-items" id="hide2"> Explore Premium</button>
+                    <button class="badge nav-items dark-badge"> <i class="fa-solid fa-download" style="margin-right: 5px;"></i> Install App</button>
+                    <i class="fa-solid fa-user fa-xl" style="color: #ffffff;"></i>
+                </div>
+            </div>
+           
+            <h2>Recently played</h2>
+            <div class="cards-container">
+                <div class="card" id="card1" data-audio="./assets/kabhi_kabhie.mp3">
+                    <img src="https://pagalfree.com/images/128Kabhi%20Kabhi%20Mere%20Dil%20Mein%20(Dial%20By%20Amitabh)%20-%20Kabhi%20Kabhie%20128%20Kbps.jpg" class="card-img">
+                    <p class="card-title">Kabhi Kabhie</p>
+                    <p class="card-info">You daily updates of the most played ...</p>
+                </div>
+            </div>
+
+            <h2>Popular artists</h2>
+            <div class="cards-container">
+                <div class="card" id="card2" data-audio="./assets/Sandal.mp3">
+                    <img src="https://i.scdn.co/image/ab67616d0000b273045de206bccf8268ce95ad9d" class="card-img-r">
+                    <p class="card-title">Raju Punjabi</p>
+                    <p class="card-info">Artist</p>
+                </div>
+                <div class="card" id="card3" data-audio="./assets/Knife_Brows.mp3">
+                    <img src="https://yt3.googleusercontent.com/W8VHZ7ECusfUstiaqh4l87Ul59UChBSRMpLAXsDN-dKmLMbY7EEpUKqF-WZ8zitU8toi_uldkA=s900-c-k-c0x00ffffff-no-rj" class="card-img-r">
+                    <p class="card-title">Dhanda Nyoliwala</p>
+                    <p class="card-info">Artist</p>
+                </div>
+                <div class="card" id="card4" data-audio="./assets/Sheesha.mp3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDNZ1ngjN-84FVtN-VlkBWSsl8qR9uA4s1aA&s" class="card-img-r">
+                    <p class="card-title">RP Singh</p>
+                    <p class="card-info">Artist</p>
+                </div>
+                <div class="card" id="card5" data-audio="./assets/Teri_Akhiyan.mp3">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_kIj2atkj1GiYZs4h8XiQqXMaPhatE6Jrb4qpQSRO5CNAQ=s900-c-k-c0x00ffffff-no-rj" class="card-img-r">
+                    <p class="card-title"> A-Bazz</p>
+                    <p class="card-info">Artist</p>
+                </div>
+            </div>
+            <h2>Popular radio</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/0oOet2f43PA68X5RxKobEy/en" class="card-img">
+                    <p class="card-info">You daily updates of the most played ...</p>
+                </div>
+                <div class="card">
+                    <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/1BwMo2LqI5YKQiNyxPycjA/en" class="card-img">
+                    <p class="card-info">You daily updates of the most played ...</p>
+                </div>
+                <div class="card">
+                    <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/4mHSoO9E4E15Kpxb0brKBS/de" class="card-img">
+                    <p class="card-info">You daily updates of the most played ...</p>
+                </div>
+                <div class="card">
+                    <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/6AXQtGIbVeP8SkpBvorjt2/de" class="card-img">
+                    <p class="card-info">You daily updates of the most played ...</p>
+                </div>
+                <div class="card">
+                    <img src="https://pickasso.spotifycdn.com/image/ab67c0de0000deef/dt/v1/img/radio/artist/02SxzmQKcXgnjK0nA58ssc/en" class="card-img">
+                    <p class="card-info">You daily updates of the most played ...</p>
+                </div>
+            </div>
+            <div class="footer"> 
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="music-player">
+            <div class="album">
+<div class="album-img">
+    <img src="https://yt3.googleusercontent.com/W8VHZ7ECusfUstiaqh4l87Ul59UChBSRMpLAXsDN-dKmLMbY7EEpUKqF-WZ8zitU8toi_uldkA=s900-c-k-c0x00ffffff-no-rj" alt="" class="madonna">
+</div>
+<div class="album-details">
+    <p class="song-name">Knife Brows</p>  <!-- Update the song title here -->
+    <p class="singer-name">Dhanda Nyoliwala</p> <!-- Update the artist name here -->
+</div>
+                <div class="dil"> 
+                    <input type="checkbox" id="heart-checkbox" style="display: none;">
+                    <i class="fa-regular fa-heart fa-xl heart-icon" style="color: #f8f6f6;"></i>
+                </div>                
+            </div>
+            <div class="player">
+                <div class="player-control">
+                 <a> <i class="fa-solid fa-shuffle"></i> 
+                    <i class="fa-solid fa-backward-step"></i> </a> 
+                    <i class="fa-solid fa-play play" style="opacity: 1; font-size: 2rem;"></i>
+                    <a></a><i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-repeat"></i>  <a></a>
+                </div>
+                <div class="playback-bar">
+                    <span> 0:00 </span> 
+                    <input class="progress-bar" type="range" name="" id="" step="1">
+                    <span> 0:00 </span> 
+                </div>
+            </div>
+            <div class="control">
+                <div class="control-icons">
+                    <a href=""><i class="fa-solid fa-closed-captioning"></i></a>
+                    <a href=""><i class="fa-regular fa-rectangle-list"></i></a>
+                    <a href=""><i class="fa-solid fa-link"></i></a>
+                    <a href="#"><i class="fa-solid fa-volume-high volume-icon"></i></a>
+                    <input class="audio-bar" type="range" step="1" min="0" max="100">
+                    <a href=""><i class="fa-solid fa-arrows-to-dot"></i></a>
+                    <a href=""><i class="fa-solid fa-up-right-and-down-left-from-center"></i></a>
+                </div>
+            </div>
+        </div>
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>You have to log in first!</p>
+            </div>
+        </div>
+        <audio id="audioPlayer" controls style="display:none;">
+            <source src="./assets/Knife_Brows.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
